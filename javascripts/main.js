@@ -1,1 +1,3 @@
-console.log('yeaaaah');
+const initializer = require('./data');
+
+initializer();
