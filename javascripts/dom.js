@@ -13,7 +13,7 @@ const printLocations = (locations) => {
   locString +=  `<div class="row">`;
   locations.forEach((location) => {
     locString += `<div class="col-sm-4 location-card">`;
-    locString +=  `<img src="${location.image}">`;
+    locString +=  `<img class="loc-pic" src="${location.image}">`;
     locString +=  `<h4>${location.name}</h4>`;
     locString +=  `<p>${location.address}</p>`;
     locString +=  `<p>${location.timeOfDay}</p>`;
