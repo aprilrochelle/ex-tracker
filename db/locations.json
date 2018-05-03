@@ -1,0 +1,28 @@
+{
+  "locations": [
+    {
+      "image" : "https://s3.amazonaws.com/gs-waymarking-images/2477c474-7425-4b2a-9e1d-a5771f896047_d.jpg",
+      "name" : "Starbucks",
+      "address" : "970 N Germantown Pkwy, Cordova, TN",
+      "timeOfDay": "Morning"
+    },
+    {
+      "image" : "https://i4.ypcdn.com/blob/4326f5f691074bef82af721a83a0e0029f93acb7_400x260_crop.jpg",
+      "name" : "A-Tan Restaurant",
+      "address" : "3445 Poplar Ave, Memphis, TN",
+      "timeOfDay": "Afternoon"
+    },
+    {
+      "image" : "https://media.seasons52.com/en_us/images/marketing/seasons52-4533-memphis-tn-d-599x430.jpg",
+      "name" : "Seasons52",
+      "address" : "6085 Poplar Ave, Memphis, TN",
+      "timeOfDay": "Evening"
+    },
+    {
+      "image" : "http://www.theamericanconservative.com/wp-content/uploads/2018/03/shutterstock_716962249.jpg",
+      "name" : "Hell",
+      "address" : "666 Burning Way",
+      "timeOfDay": "After Dark"
+    }
+  ]
+}
