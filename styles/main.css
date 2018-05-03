@@ -7,6 +7,10 @@ body {
   margin: 0 auto;
 }
 
+.btn-group {
+  margin: 10px auto;
+}
+
 .loc-pic {
   max-width: 85%;
 }
