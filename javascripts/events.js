@@ -12,8 +12,18 @@ const filterLocations = (e) => {
   };
 };
 
+const searchBar = (e) => {
+  if (e.which === 13) {
+    // $('#location-div .location-card').hide();
+    const userInput = $(e.target).val();
+    console.log(userInput);
+    // $('#location-div .location-card').has(userInput).show();
+  };
+};
+
 const bindEvents = () => {
   $('.btn').on('click', filterLocations);
+  $('#search').keypress(searchBar);
 };
 
 module.exports = bindEvents;
