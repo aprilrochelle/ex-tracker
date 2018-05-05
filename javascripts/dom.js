@@ -23,7 +23,7 @@ const printLocations = (locations) => {
     }
     locString +=  `<img class="loc-pic" src="${location.image}">`;
     locString +=  `<h4>${location.name}</h4>`;
-    locString +=  `<p>${location.address}</p>`;
+    locString +=  `<p class="address">${location.address}</p>`;
     locString +=  `<p>${location.timeOfDay}</p>`;
     locString += `</div>`;
   });
