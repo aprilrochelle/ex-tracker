@@ -1,3 +1,8 @@
+jQuery.expr[':'].icontains = function (a, i, m) {
+  return jQuery(a).text().toUpperCase()
+    .indexOf(m[3].toUpperCase()) >= 0;
+};
+
 const filterLocations = (e) => {
   const button = $(e.target).html();
   $('#location-div .location-card').show();
@@ -14,11 +19,11 @@ const filterLocations = (e) => {
 
 const searchBar = (e) => {
   if (e.which === 13) {
-    // $('#location-div .location-card').hide();
     const userInput = $(e.target).val();
-    console.log(userInput);
-    // $('#location-div .location-card').has(userInput).show();
+    $(`#location-div .location-card:not(:icontains(${userInput}))`).hide();
+    $(e.target).val('');
   };
+  // $('#search').html('');
 };
 
 const bindEvents = () => {
