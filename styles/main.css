@@ -1,5 +1,62 @@
 body {
-  background-color: yellow;
+  background: url('../img/caution.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: black;
+  font-family: 'Ropa Sans', sans-serif;
+  font-size: 2em;
+  margin: 0;
+  color: white;
+  position: relative;
+}
+
+#body-wrapper {
+  background-color: rgba(4, 4, 2, 0.7);
+  margin: 0;
+}
+
+.navbar-header {
+  float: none;
+}
+
+#light1 {
+  position: absolute;
+  top: 25px;
+  left: -10px;
+  width: 200px;
+  z-index: 1000;
+}
+
+#light2 {
+  position: absolute;
+  top: 25px;
+  right: -10px;
+  width: 200px;
+  z-index: 1000;
+}
+
+h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 4em;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-top: 0;
+  padding-top: 30px;
+  color: whitesmoke;
+}
+
+h1 span {
+  font-family: 'Rock Salt', cursive;
+  font-size: 1em;
+  margin-top: 15px;
+  color: rgb(219, 55, 43);
+}
+
+h2,
+h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2em;
+  font-weight: 600;
 }
 
 #body-wrapper {
@@ -7,10 +64,40 @@ body {
   margin: 0 auto;
 }
 
-.btn-group {
-  margin: 10px auto;
+.buttons {
+  margin: 10px;
+  text-align: center;
+}
+
+.ex-pic {
+  max-height: 350px;
+  border: solid 8px rgb(219, 55, 43);
+}
+
+.col-sm-4 {
+  padding: 0;
+}
+
+.row {
+  margin: 15px 0;
 }
 
 .loc-pic {
   max-width: 85%;
+}
+
+.location-card {
+  height: 445px;
+  background-color: #181818;
+  border: solid 3px rgb(219, 55, 43);
+  text-align: center;
+  margin: 7px 0;
+  padding: 10px;
+}
+
+.location-card .location {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2em;
+  color: yellow;
+  margin-bottom: 2px;
 }

@@ -1,9 +1,18 @@
 const printEx = (exData) => {
   let domString = '';
-  domString += `<img src="${exData.image}">`;
-  domString += `<h3>Name: ${exData.name}</h3>`;
-  domString += `<h3>Age: ${exData.age}</h3>`;
-  domString += `<p>${exData.flaws}</p>`;
+  domString += `<div class="container-fluid">`;
+  domString +=  `<div class="row">`;
+  domString +=    `<div class="col-sm-4 col-sm-offset-2 text-center">`;
+  domString +=      `<img class="ex-pic" src="${exData.image}">`;
+  domString +=    `</div>`;
+  domString +=    `<div class="col-sm-4">`;
+  domString +=      `<h3>Name: ${exData.name}</h3>`;
+  domString +=      `<h3>Age: ${exData.age}</h3>`;
+  domString +=      `<h3>Flaws: </h3>`;
+  domString +=      `<p>${exData.flaws}</p>`;
+  domString +=    `</div>`;
+  domString +=  `</div>`;
+  domString += `</div>`;
   return domString;
 };
 
@@ -22,7 +31,7 @@ const printLocations = (locations) => {
       locString += `<div class="col-sm-4 location-card after-dark">`;
     }
     locString +=  `<img class="loc-pic" src="${location.image}">`;
-    locString +=  `<h4>${location.name}</h4>`;
+    locString +=  `<h3 class="location">${location.name}</h3>`;
     locString +=  `<p class="address">${location.address}</p>`;
     locString +=  `<p>${location.timeOfDay}</p>`;
     locString += `</div>`;
