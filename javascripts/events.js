@@ -14,6 +14,8 @@ const filterLocations = (e) => {
     $('#location-div .location-card').not('.evening').toggle();
   } else if (button === 'After Dark') {
     $('#location-div .location-card').not('.after-dark').toggle();
+  } else {
+    $('#location-div .location-card').show();
   };
 };
 
@@ -23,7 +25,6 @@ const searchBar = (e) => {
     $(`#location-div .location-card:not(:icontains(${userInput}))`).hide();
     $(e.target).val('');
   };
-  // $('#search').html('');
 };
 
 const bindEvents = () => {
