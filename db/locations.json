@@ -1,102 +1,119 @@
 {
   "locations": [
     {
+      "locationId": 1,
       "image" : "https://s3.amazonaws.com/gs-waymarking-images/2477c474-7425-4b2a-9e1d-a5771f896047_d.jpg",
       "name" : "Starbucks",
       "address" : "970 N Germantown Pkwy, Cordova, TN",
       "timeOfDay": "Morning"
     },
     {
+      "locationId": 2,
       "image" : "https://i4.ypcdn.com/blob/4326f5f691074bef82af721a83a0e0029f93acb7_400x260_crop.jpg",
       "name" : "A-Tan Restaurant",
       "address" : "3445 Poplar Ave, Memphis, TN",
       "timeOfDay": "Afternoon"
     },
     {
+      "locationId": 3,
       "image" : "https://media.seasons52.com/en_us/images/marketing/seasons52-4533-memphis-tn-d-599x430.jpg",
       "name" : "Seasons52",
       "address" : "6085 Poplar Ave, Memphis, TN",
       "timeOfDay": "Evening"
     },
     {
+      "locationId": 4,
       "image" : "http://www.theamericanconservative.com/wp-content/uploads/2018/03/shutterstock_716962249.jpg",
       "name" : "Hell",
       "address" : "666 Burning Way",
       "timeOfDay": "After Dark"
     },
     {
+      "locationId": 5,
       "image" : "https://safebytes.com/wp-content/uploads/2016/10/nightmare-930x706.jpg",
       "name" : "My Nightmares",
       "address" : "901 April Lane, Nashville, TN",
       "timeOfDay": "After Dark"
     },
     {
+      "locationId": 6,
       "image" : "https://c1.staticflickr.com/6/5475/9761349454_ef50f6d47a_b.jpg",
       "name" : "Jack Pirtle's Chicken",
       "address" : "2520 Mt Moriah Rd, Memphis, TN",
       "timeOfDay": "Afternoon"
     },
     {
+      "locationId": 7,
       "image" : "https://cdn.tmxstores.com/uploads/2013/02/15186-TM-Memphis-TN-16.jpg",
       "name" : "TitleMax",
       "address" : "1120 N Germantown Pkwy, Memphis, TN",
       "timeOfDay": "Evening"
     },
     {
+      "locationId": 8,
       "image" : "https://media-cdn.tripadvisor.com/media/photo-s/0c/de/18/1a/horseshoe-tunica.jpg",
       "name" : "Horseshoe Casino",
       "address" : "1021 Casino Center Dr, Robinsonville, MS",
       "timeOfDay": "After Dark"
     },
     {
+      "locationId": 9,
       "image" : "https://media-cdn.tripadvisor.com/media/photo-s/04/80/c2/a6/harrah-s-tunica-sunset.jpg",
       "name" : "Harrah's Casino",
       "address" : "13615 Old Highway 61 North, Robinsonville, MS",
       "timeOfDay": "After Dark"
     },
     {
+      "locationId": 10,
       "image" : "https://s3-media2.fl.yelpcdn.com/bphoto/5TiZ4HbIcXpmkaxu0x8wXw/ls.jpg",
       "name" : "Sasha Wine & Liquors",
       "address" : "1691 N Germantown Pkwy # 102, Cordova, TN",
       "timeOfDay": "Evening"
     },
     {
+      "locationId": 11,
       "image" : "https://hips.htvapps.com/htv-prod-media.s3.amazonaws.com/ibmig/cms/image/wcvb/30737010-30737010.jpg?crop=1xw:0.84320068359375000xh;center,top&resize=900:*",
       "name" : "Walmart",
       "address" : "577 N Germantown Pkwy, Cordova, TN",
       "timeOfDay": "Morning"
     },
     {
+      "locationId": 12,
       "image" : "https://media-cdn.tripadvisor.com/media/photo-s/06/ea/07/2e/breakfast-lunch-dinner.jpg",
       "name" : "Dunkin Donuts",
       "address" : "775 N Germantown Pkwy, Cordova, TN",
       "timeOfDay": "Morning"
     },
     {
+      "locationId": 13,
       "image" : "https://media-cdn.tripadvisor.com/media/photo-s/02/29/db/0b/front-entrance.jpg",
       "name" : "Memphis Zoo",
       "address" : "2000 Prentiss Pl, Memphis, TN",
       "timeOfDay": "Afternoon"
     },
     {
+      "locationId": 14,
       "image" : "https://i4.ypcdn.com/blob/51c7f5e840c76b8e6fdeb3e88ed33e2c57e048c7_400x260_crop.jpg",
       "name" : "Shell",
       "address" : "1725 N Germantown Pkwy, Cordova, TN",
       "timeOfDay": "Morning"
     },
     {
+      "locationId": 15,
       "image" : "https://i2.ypcdn.com/blob/9ed8cc1057c84f35e77d6e3f311646eea48649fd_400x260_crop.jpg",
       "name" : "Natalie's Liquor Warehouse",
       "address" : "1009 N Germantown Pkwy, Cordova, TN",
       "timeOfDay": "Afternoon"
     },
     {
+      "locationId": 16,
       "image" : "http://images4.loopnet.com/i2/Kn57PEw5SClRo4tWJaRJXgFD-AnfbnuN1m0Yh2NKrqQ/112/image.jpg",
       "name" : "Krispy Kreme",
       "address" : "6072 Stage Rd, Bartlett, TN",
       "timeOfDay": "Morning"
     },
     {
+      "locationId": 17,
       "image" : "https://pbs.twimg.com/profile_images/606650332/yellow-wine-store_400x400.gif",
       "name" : "Bartlett Wine & Spirits",
       "address" : "6841 Summer Ave, Memphis, TN",
