@@ -49,11 +49,15 @@ const locationsJSON = () => {
 };
 
 const initializer = () => {
+  let exesData = [];
+  let locationData = [];
   exesJSON().then((exes) => {
-    dom.exString(exes);
-  });
-  locationsJSON().then((locations) => {
-    dom.printLocations(locations);
+    exesData = exes;
+    dom.exString(exesData);
+    return locationsJSON();
+  }).then((locations) => {
+    locationData = locations;
+    dom.printLocations(locationData, exesData);
   });
 };
 

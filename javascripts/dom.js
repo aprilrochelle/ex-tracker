@@ -3,7 +3,7 @@ const exString = (exes) => {
     let domString = '';
     domString += `<div class="container-fluid">`;
     domString +=  `<div class="row">`;
-    domString +=    `<div class="col-sm-4 col-sm-offset-2 text-center">`;
+    domString +=    `<div class="col-sm-4 col-sm-offset-2 text-center ex-card">`;
     domString +=      `<img class="ex-pic" src="${ex.image}">`;
     domString +=    `</div>`;
     domString +=    `<div class="col-sm-4">`;
@@ -14,11 +14,11 @@ const exString = (exes) => {
     domString +=    `</div>`;
     domString +=  `</div>`;
     domString += `</div>`;
-    printExesToDom(domString);
+    printToDom(domString);
   });
 };
 
-const printLocations = (locations) => {
+const printLocations = (locations, exes) => {
   let locString = '';
   locString += `<div class="container-fluid">`;
   locString +=  `<div class="row">`;
@@ -36,19 +36,22 @@ const printLocations = (locations) => {
     locString +=  `<h3 class="location">${location.name}</h3>`;
     locString +=  `<p class="address">${location.address}</p>`;
     locString +=  `<p>${location.timeOfDay}</p>`;
+    exes.forEach((ex) => {
+      ex.locationIds.forEach((locationId) => {
+        if (locationId === location.locationId) {
+          locString +=  `<p>${ex.name}</p>`;
+        }
+      });
+    });
     locString += `</div>`;
   });
   locString += `</div>`;
   locString += `</div>`;
-  printLocationsToDom(locString);
+  printToDom(locString);
 };
 
-const printExesToDom = (array) => {
+const printToDom = (array) => {
   $('#ex-box').append(array);
-};
-
-const printLocationsToDom = (array) => {
-  $('#location-div').append(array);
 };
 
 module.exports = {

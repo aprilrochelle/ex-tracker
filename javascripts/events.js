@@ -27,9 +27,14 @@ const searchBar = (e) => {
   };
 };
 
+const displayEx = (e) => {
+
+};
+
 const bindEvents = () => {
   $('.btn').on('click', filterLocations);
   $('#search').keypress(searchBar);
+  $('.ex-card').on('click', displayEx);
 };
 
 module.exports = bindEvents;
