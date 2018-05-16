@@ -1,19 +1,21 @@
-const printEx = (exData) => {
-  let domString = '';
-  domString += `<div class="container-fluid">`;
-  domString +=  `<div class="row">`;
-  domString +=    `<div class="col-sm-4 col-sm-offset-2 text-center">`;
-  domString +=      `<img class="ex-pic" src="${exData.image}">`;
-  domString +=    `</div>`;
-  domString +=    `<div class="col-sm-4">`;
-  domString +=      `<h3>Name: ${exData.name}</h3>`;
-  domString +=      `<h3>Age: ${exData.age}</h3>`;
-  domString +=      `<h3>Flaws: </h3>`;
-  domString +=      `<p>${exData.flaws}</p>`;
-  domString +=    `</div>`;
-  domString +=  `</div>`;
-  domString += `</div>`;
-  return domString;
+const exString = (exes) => {
+  exes.forEach((ex) => {
+    let domString = '';
+    domString += `<div class="container-fluid">`;
+    domString +=  `<div class="row">`;
+    domString +=    `<div class="col-sm-4 col-sm-offset-2 text-center">`;
+    domString +=      `<img class="ex-pic" src="${ex.image}">`;
+    domString +=    `</div>`;
+    domString +=    `<div class="col-sm-4">`;
+    domString +=      `<h3>Name: ${ex.name}</h3>`;
+    domString +=      `<h3>Age: ${ex.age}</h3>`;
+    domString +=      `<h3>Flaws: </h3>`;
+    domString +=      `<p>${ex.flaws}</p>`;
+    domString +=    `</div>`;
+    domString +=  `</div>`;
+    domString += `</div>`;
+    printExesToDom(domString);
+  });
 };
 
 const printLocations = (locations) => {
@@ -41,7 +43,11 @@ const printLocations = (locations) => {
   return locString;
 };
 
+const printExesToDom = (array) => {
+  $('#ex-box').append(array);
+};
+
 module.exports = {
-  printEx,
+  exString,
   printLocations,
 };
