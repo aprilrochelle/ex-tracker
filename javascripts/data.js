@@ -35,9 +35,25 @@ const exesJSON = () => {
   });
 };
 
+const locationsJSON = () => {
+  return new Promise((resolve, reject) => {
+    $.get('../db/locations.json')
+      .done((data) => {
+        const locations = data.locations;
+        resolve(locations);
+      })
+      .fail((err) => {
+        reject(`I got an error!`, err);
+      });
+  });
+};
+
 const initializer = () => {
   exesJSON().then((exes) => {
     dom.exString(exes);
+  });
+  locationsJSON().then((locations) => {
+    dom.printLocations(locations);
   });
 };
 
