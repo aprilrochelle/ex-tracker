@@ -40,11 +40,15 @@ const printLocations = (locations) => {
   });
   locString += `</div>`;
   locString += `</div>`;
-  return locString;
+  printLocationsToDom(locString);
 };
 
 const printExesToDom = (array) => {
   $('#ex-box').append(array);
+};
+
+const printLocationsToDom = (array) => {
+  $('#location-div').append(array);
 };
 
 module.exports = {
