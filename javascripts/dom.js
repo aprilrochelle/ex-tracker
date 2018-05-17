@@ -1,21 +1,19 @@
 const exString = (exes) => {
+  let domString = '';
+  domString += `<div class="container-fluid">`;
+  domString +=  `<div class="row">`;
   exes.forEach((ex) => {
-    let domString = '';
-    domString += `<div class="container-fluid">`;
-    domString +=  `<div class="row">`;
-    domString +=    `<div class="col-sm-4 col-sm-offset-2 text-center ex-card">`;
+    domString +=    `<div class="col-sm-4 text-center ex-card">`;
     domString +=      `<img class="ex-pic" src="${ex.image}">`;
-    domString +=    `</div>`;
-    domString +=    `<div class="col-sm-4">`;
     domString +=      `<h3>Name: ${ex.name}</h3>`;
     domString +=      `<h3>Age: ${ex.age}</h3>`;
     domString +=      `<h3>Flaws: </h3>`;
     domString +=      `<p>${ex.flaws}</p>`;
     domString +=    `</div>`;
-    domString +=  `</div>`;
-    domString += `</div>`;
-    printToDom(domString);
   });
+  domString +=  `</div>`;
+  domString += `</div>`;
+  printToDom(domString);
 };
 
 const printLocations = (locations, exes) => {
@@ -50,11 +48,29 @@ const printLocations = (locations, exes) => {
   printToDom(locString);
 };
 
+// const singleExString = (ex) => {
+//   let singleEx = '';
+//   singleEx += `<div class="container-fluid">`;
+//   singleEx +=  `<div class="row">`;
+//   singleEx +=   `<div class="col-md-8 col-md-offset-2 single-ex">`;
+//   singleEx +=     `<img class="ex-pic" src="${ex.image}">`;
+//   singleEx +=      `<h3>Name: ${ex.name}</h3>`;
+//   singleEx +=      `<h3>Age: ${ex.age}</h3>`;
+//   singleEx +=      `<h3>Flaws: </h3>`;
+//   singleEx +=      `<p>${ex.flaws}</p>`;
+//   printSingleEx(singleEx);
+// };
+
 const printToDom = (array) => {
   $('#ex-box').append(array);
 };
 
+// const printSingleEx = (exString) => {
+//   $('#ex-box').html(exString);
+// };
+
 module.exports = {
   exString,
   printLocations,
+  // singleExString,
 };

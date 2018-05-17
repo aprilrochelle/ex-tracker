@@ -1,26 +1,5 @@
 const dom = require('./dom');
-// const loadEx = require('./ex');
-// const loadLocations = require('./locations');
-// const printStuff = require('./dom');
-// const events = require('./events');
-
-// const whenExLoads = (data) => {
-//   $('#ex-box').append(printStuff.printEx(data));
-// };
-
-// const whenLocationsLoad = (data) => {
-//   $('#location-div').append(printStuff.printLocations(data.locations));
-//   events();
-// };
-
-// const ifError = (error) => {
-//   console.error('Whoops!');
-// };
-
-// const initializer = () => {
-//   loadEx(whenExLoads, ifError);
-//   loadLocations(whenLocationsLoad, ifError);
-// };
+const events = require('./events');
 
 const exesJSON = () => {
   return new Promise((resolve, reject) => {
@@ -48,6 +27,10 @@ const locationsJSON = () => {
   });
 };
 
+// const singleEx = () => {
+
+// };
+
 const initializer = () => {
   let exesData = [];
   let locationData = [];
@@ -58,7 +41,11 @@ const initializer = () => {
   }).then((locations) => {
     locationData = locations;
     dom.printLocations(locationData, exesData);
+    events.bindEvents();
+    events.displayEx(locationData, exesData);
   });
 };
 
-module.exports = initializer;
+module.exports = {
+  initializer,
+};

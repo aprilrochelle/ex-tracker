@@ -70,13 +70,14 @@ h3 {
 }
 
 .ex-pic {
-  max-height: 350px;
-  border: solid 8px rgb(219, 55, 43);
+  max-height: 200px;
+  border: solid 4px rgb(219, 55, 43);
+  max-width: 85%;
 }
 
-.col-sm-4 {
+/* .col-sm-4 {
   padding: 0;
-}
+} */
 
 .row {
   margin: 15px 0;

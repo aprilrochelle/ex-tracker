@@ -1,3 +1,6 @@
+// const data = require('./data');
+// const dom = require('./dom');
+
 jQuery.expr[':'].icontains = function (a, i, m) {
   return jQuery(a).text().toUpperCase()
     .indexOf(m[3].toUpperCase()) >= 0;
@@ -27,14 +30,20 @@ const searchBar = (e) => {
   };
 };
 
-const displayEx = (e) => {
+const displayEx = (exes, locations) => {
+  $('body').on('click', (e) => {
+    const exClicked = $(e.target).closest('.ex-card');
+    console.log(exClicked);
+  });
 
 };
 
 const bindEvents = () => {
   $('.btn').on('click', filterLocations);
   $('#search').keypress(searchBar);
-  $('.ex-card').on('click', displayEx);
 };
 
-module.exports = bindEvents;
+module.exports = {
+  bindEvents,
+  displayEx,
+};
