@@ -1,5 +1,5 @@
-// const data = require('./data');
-// const dom = require('./dom');
+const data = require('./data');
+const dom = require('./dom');
 
 jQuery.expr[':'].icontains = function (a, i, m) {
   return jQuery(a).text().toUpperCase()
@@ -30,12 +30,13 @@ const searchBar = (e) => {
   };
 };
 
-const displayEx = (exes, locations) => {
-  $('body').on('click', (e) => {
-    const exClicked = $(e.target).closest('.ex-card');
-    console.log(exClicked);
+const displayEx = () => {
+  const exList = data.getExes();
+  const locationList = data.getLocations();
+  $('#ex-box').click((e) => {
+    const exId = $(e.target).closest('.ex-card').prop('id');
+    dom.singleExString(exList[exId], locationList);
   });
-
 };
 
 const bindEvents = () => {

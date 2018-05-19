@@ -1,4 +1,8 @@
-const initializer = require('./data');
-// const events = require('./events');
+const data = require('./data');
+const events = require('./events');
 
-initializer.initializer();
+$(document).ready(() => {
+  data.initializer();
+  events.bindEvents();
+  events.displayEx();
+});

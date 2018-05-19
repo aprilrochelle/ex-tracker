@@ -3,7 +3,7 @@ const exString = (exes) => {
   domString += `<div class="container-fluid">`;
   domString +=  `<div class="row">`;
   exes.forEach((ex) => {
-    domString +=    `<div class="col-sm-4 text-center ex-card">`;
+    domString +=    `<div id="${ex.exId}" class="col-sm-4 text-center ex-card">`;
     domString +=      `<img class="ex-pic" src="${ex.image}">`;
     domString +=      `<h3>Name: ${ex.name}</h3>`;
     domString +=      `<h3>Age: ${ex.age}</h3>`;
@@ -35,8 +35,8 @@ const printLocations = (locations, exes) => {
     locString +=  `<p class="address">${location.address}</p>`;
     locString +=  `<p>${location.timeOfDay}</p>`;
     exes.forEach((ex) => {
-      ex.locationIds.forEach((locationId) => {
-        if (locationId === location.locationId) {
+      ex.placeNums.forEach((placeNum) => {
+        if (placeNum === location.locationId) {
           locString +=  `<p>${ex.name}</p>`;
         }
       });
@@ -48,29 +48,41 @@ const printLocations = (locations, exes) => {
   printToDom(locString);
 };
 
-// const singleExString = (ex) => {
-//   let singleEx = '';
-//   singleEx += `<div class="container-fluid">`;
-//   singleEx +=  `<div class="row">`;
-//   singleEx +=   `<div class="col-md-8 col-md-offset-2 single-ex">`;
-//   singleEx +=     `<img class="ex-pic" src="${ex.image}">`;
-//   singleEx +=      `<h3>Name: ${ex.name}</h3>`;
-//   singleEx +=      `<h3>Age: ${ex.age}</h3>`;
-//   singleEx +=      `<h3>Flaws: </h3>`;
-//   singleEx +=      `<p>${ex.flaws}</p>`;
-//   printSingleEx(singleEx);
-// };
+const singleExString = (ex, locations) => {
+  const locationList = [];
+  let singleEx = '';
+  singleEx += `<div class="container-fluid">`;
+  singleEx +=  `<div class="row">`;
+  singleEx +=   `<div class="col-md-8 col-md-offset-2 single-ex">`;
+  singleEx +=     `<img class="ex-pic" src="${ex.image}">`;
+  singleEx +=      `<h3>Name: ${ex.name}</h3>`;
+  singleEx +=      `<h3>Age: ${ex.age}</h3>`;
+  singleEx +=      `<h3>Flaws: </h3>`;
+  singleEx +=      `<p>${ex.flaws}</p>`;
+  ex.placeNums.forEach((placeNum) => {
+    locations.forEach((location) => {
+      if (placeNum === location.locationId) {
+        locationList.push(location.name);
+      }
+    });
+  });
+  singleEx +=     `<p>${locationList}</p>`;
+  singleEx +=    `</div>`;
+  singleEx +=   `</div>`;
+  singleEx +=  `</div>`;
+  printSingleEx(singleEx);
+};
 
 const printToDom = (array) => {
   $('#ex-box').append(array);
 };
 
-// const printSingleEx = (exString) => {
-//   $('#ex-box').html(exString);
-// };
+const printSingleEx = (exString) => {
+  $('#ex-box').html(exString);
+};
 
 module.exports = {
   exString,
   printLocations,
-  // singleExString,
+  singleExString,
 };

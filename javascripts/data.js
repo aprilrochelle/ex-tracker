@@ -1,5 +1,7 @@
 const dom = require('./dom');
-const events = require('./events');
+
+let exesData = [];
+let locationData = [];
 
 const exesJSON = () => {
   return new Promise((resolve, reject) => {
@@ -28,24 +30,39 @@ const locationsJSON = () => {
 };
 
 // const singleEx = () => {
-
+//   let ex = {};
+//   return exesJSON().then((exes) => {
+//     ex = exes[0];
+//   }).
 // };
 
+const getAllData = () => {
+  return Promise.all([exesJSON(), locationsJSON(),])
+    .then((results) => {
+      exesData = results[0];
+      locationData = results[1];
+      dom.exString(exesData);
+      dom.printLocations(locationData, exesData);
+    })
+    .catch((err) => {
+      console.error('oops!', err);
+    });
+};
+
+const getExes = () => {
+  return exesData;
+};
+
+const getLocations = () => {
+  return locationData;
+};
+
 const initializer = () => {
-  let exesData = [];
-  let locationData = [];
-  exesJSON().then((exes) => {
-    exesData = exes;
-    dom.exString(exesData);
-    return locationsJSON();
-  }).then((locations) => {
-    locationData = locations;
-    dom.printLocations(locationData, exesData);
-    events.bindEvents();
-    events.displayEx(locationData, exesData);
-  });
+  getAllData();
 };
 
 module.exports = {
   initializer,
+  getExes,
+  getLocations,
 };
