@@ -49,7 +49,6 @@ const printLocations = (locations, exes) => {
 };
 
 const singleExString = (ex, locations) => {
-  const locationList = [];
   let singleEx = '';
   singleEx += `<div class="container-fluid">`;
   singleEx +=  `<div class="row">`;
