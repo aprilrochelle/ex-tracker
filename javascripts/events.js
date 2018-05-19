@@ -30,21 +30,19 @@ const searchBar = (e) => {
   };
 };
 
-const displayEx = () => {
+const displayEx = (e) => {
   const exList = data.getExes();
   const locationList = data.getLocations();
-  $('#ex-box').click((e) => {
-    const exId = $(e.target).closest('.ex-card').prop('id');
-    dom.singleExString(exList[exId], locationList);
-  });
+  const exIndex = $(e.target).closest('.ex-card').prop('id') - 1;
+  dom.singleExString(exList[exIndex], locationList);
 };
 
 const bindEvents = () => {
   $('.btn').on('click', filterLocations);
   $('#search').keypress(searchBar);
+  $('#ex-box').click(displayEx);
 };
 
 module.exports = {
   bindEvents,
-  displayEx,
 };

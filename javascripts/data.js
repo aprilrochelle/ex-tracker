@@ -29,13 +29,6 @@ const locationsJSON = () => {
   });
 };
 
-// const singleEx = () => {
-//   let ex = {};
-//   return exesJSON().then((exes) => {
-//     ex = exes[0];
-//   }).
-// };
-
 const getAllData = () => {
   return Promise.all([exesJSON(), locationsJSON(),])
     .then((results) => {

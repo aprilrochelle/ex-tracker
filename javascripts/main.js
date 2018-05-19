@@ -4,5 +4,4 @@ const events = require('./events');
 $(document).ready(() => {
   data.initializer();
   events.bindEvents();
-  events.displayEx();
 });

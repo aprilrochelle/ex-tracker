@@ -59,17 +59,21 @@ const singleExString = (ex, locations) => {
   singleEx +=      `<h3>Age: ${ex.age}</h3>`;
   singleEx +=      `<h3>Flaws: </h3>`;
   singleEx +=      `<p>${ex.flaws}</p>`;
+  singleEx +=     `</div>`;
+  singleEx +=   `</div>`;
+  singleEx +=  `<div class="row">`;
   ex.placeNums.forEach((placeNum) => {
     locations.forEach((location) => {
       if (placeNum === location.locationId) {
-        locationList.push(location.name);
+        singleEx +=   `<div class="col-sm-4 location-card">`;
+        singleEx +=     `<img class="loc-pic" src="${location.image}">`;
+        singleEx +=     `<h3 class="location">${location.name}</h3>`;
+        singleEx +=     `<p class="address">${location.address}</p>`;
+        singleEx +=   `</div>`;
       }
     });
   });
-  singleEx +=     `<p>${locationList}</p>`;
   singleEx +=    `</div>`;
-  singleEx +=   `</div>`;
-  singleEx +=  `</div>`;
   printSingleEx(singleEx);
 };
 
