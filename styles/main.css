@@ -64,18 +64,19 @@ h3 {
   margin: 0 auto;
 }
 
+#back {
+  margin-bottom: 15px;
+}
+
 .buttons {
   margin: 10px;
   text-align: center;
 }
 
 .ex-pic {
-  max-height: 350px;
-  border: solid 8px rgb(219, 55, 43);
-}
-
-.col-sm-4 {
-  padding: 0;
+  max-height: 200px;
+  border: solid 4px rgb(219, 55, 43);
+  max-width: 85%;
 }
 
 .row {
@@ -87,7 +88,7 @@ h3 {
 }
 
 .location-card {
-  height: 445px;
+  height: 515px;
   background-color: #181818;
   border: solid 3px rgb(219, 55, 43);
   text-align: center;
@@ -95,6 +96,16 @@ h3 {
   padding: 10px;
 }
 
+.single-location-card {
+  height: 400px;
+  background-color: #181818;
+  border: solid 3px rgb(219, 55, 43);
+  text-align: center;
+  margin: 7px 0;
+  padding: 10px;
+}
+
+.single-location-card .location,
 .location-card .location {
   font-family: 'Oswald', sans-serif;
   font-size: 1.2em;
