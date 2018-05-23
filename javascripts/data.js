@@ -51,6 +51,8 @@ const getLocations = () => {
 };
 
 const initializer = () => {
+  $('#back').hide();
+  $('.buttons').show();
   getAllData();
 };
 

@@ -64,6 +64,10 @@ h3 {
   margin: 0 auto;
 }
 
+#back {
+  margin-bottom: 15px;
+}
+
 .buttons {
   margin: 10px;
   text-align: center;
@@ -75,10 +79,6 @@ h3 {
   max-width: 85%;
 }
 
-/* .col-sm-4 {
-  padding: 0;
-} */
-
 .row {
   margin: 15px 0;
 }
@@ -88,7 +88,7 @@ h3 {
 }
 
 .location-card {
-  height: 445px;
+  height: 515px;
   background-color: #181818;
   border: solid 3px rgb(219, 55, 43);
   text-align: center;
@@ -96,6 +96,16 @@ h3 {
   padding: 10px;
 }
 
+.single-location-card {
+  height: 400px;
+  background-color: #181818;
+  border: solid 3px rgb(219, 55, 43);
+  text-align: center;
+  margin: 7px 0;
+  padding: 10px;
+}
+
+.single-location-card .location,
 .location-card .location {
   font-family: 'Oswald', sans-serif;
   font-size: 1.2em;

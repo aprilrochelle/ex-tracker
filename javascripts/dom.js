@@ -51,8 +51,7 @@ const printLocations = (locations, exes) => {
 const singleExString = (ex, locations) => {
   let singleEx = '';
   singleEx += `<div class="container-fluid">`;
-  singleEx +=  `<div class="row">`;
-  singleEx +=   `<div class="col-md-8 col-md-offset-2 single-ex">`;
+  singleEx +=   `<div class="col-md-8 col-md-offset-2 single-ex text-center">`;
   singleEx +=     `<img class="ex-pic" src="${ex.image}">`;
   singleEx +=      `<h3>Name: ${ex.name}</h3>`;
   singleEx +=      `<h3>Age: ${ex.age}</h3>`;
@@ -64,7 +63,7 @@ const singleExString = (ex, locations) => {
   ex.placeNums.forEach((placeNum) => {
     locations.forEach((location) => {
       if (placeNum === location.locationId) {
-        singleEx +=   `<div class="col-sm-4 location-card">`;
+        singleEx +=   `<div class="col-sm-4 single-location-card">`;
         singleEx +=     `<img class="loc-pic" src="${location.image}">`;
         singleEx +=     `<h3 class="location">${location.name}</h3>`;
         singleEx +=     `<p class="address">${location.address}</p>`;

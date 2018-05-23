@@ -35,12 +35,18 @@ const displayEx = (e) => {
   const locationList = data.getLocations();
   const exIndex = $(e.target).closest('.ex-card').prop('id') - 1;
   dom.singleExString(exList[exIndex], locationList);
+  $('#back').show();
+  $('.buttons').hide();
 };
 
 const bindEvents = () => {
-  $('.btn').on('click', filterLocations);
+  $('.btn').click(filterLocations);
   $('#search').keypress(searchBar);
   $('#ex-box').click(displayEx);
+  $('#back').click(() => {
+    $('#ex-box').html('');
+    data.initializer();
+  });
 };
 
 module.exports = {
